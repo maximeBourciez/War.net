@@ -1,12 +1,12 @@
 export class Image {
   id: number;
-  path: string;
+  chemin: string;
   alt: string;
 
   // Constructeur
   constructor(id: number, path: string, alt: string) {
     this.id = id;
-    this.path = path;
+    this.chemin = path;
     this.alt = alt;
   }
 

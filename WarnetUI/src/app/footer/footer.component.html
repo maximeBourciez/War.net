@@ -1,1 +1,32 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h5>war.net</h5>
+        <p>Le site de vente en ligne de matériel historique de la Seconde Guerre mondiale.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Liens Utiles</h5>
+        <ul class="footer-list">
+          <li><a routerLink="/" class="footer-link">Accueil</a></li>
+          <li><a routerLink="/panier" class="footer-link">Panier</a></li>
+          <li *ngIf="isLoggedIn"><a href="javascript:void(0)" (click)="logout()" class="footer-link">Se déconnecter</a></li>
+          <li *ngIf="!isLoggedIn"><a routerLink="/login" class="footer-link">Se connecter</a></li>
+          <li><a routerLink="/contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Suivez-nous</h5>
+        <a href="#" class="footer-link"><i class="fab fa-facebook-f"></i> Facebook</a><br>
+        <a href="#" class="footer-link"><i class="fab fa-twitter"></i> Twitter</a><br>
+        <a href="#" class="footer-link"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 war.net. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>

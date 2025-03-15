@@ -8,16 +8,21 @@ import {Observable} from 'rxjs';
 })
 export class ArticleService {
 
-  catalog!: Article[];
   apiUrl!: string;
 
   constructor( private http: HttpClient ) {
-    this.apiUrl = 'http://localhost:8000/';
+    this.apiUrl = 'http://localhost:8000/api/';
   }
 
-  // Méthode de récupération vai l'API
+  // Méthodes
+
+  // Récupération de tous les articles
   getAllArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>(this.apiUrl + '/articles');
+    return this.http.get<Article[]>(this.apiUrl + 'articles');
   }
 
+  // Récupération d'un article par son id
+  getArticleById(id: number): Observable<Article>{
+    return this.http.get<Article>(this.apiUrl + 'article/' + id);
+  }
 }

@@ -1,30 +1,12 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" routerLink="/">war.net</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/panier">Panier</a>
-        </li>
-        <li *ngIf="isLoggedIn" class="nav-item">
-          <a class="nav-link" routerLink="/dashboard">Dashboard</a>
-        </li>
-      </ul>
+<header>
+  <nav class="navbar">
+    <div class="logo">MonSite</div>
+    <ul class="nav-links">
+      <li><a routerLink="/">Accueil</a></li>
+      <li><a routerLink="/catalog">Catalogue</a></li>
+      <li><a routerLink="/">Services</a></li>
+      <li><a routerLink="/">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-
-      <div>
-        <a href="javascript:void(0)" (click)="logout()" class="btn btn-primary ms-3">Se déconnecter</a>
-      </div>
-
-      <ng-template #loggedOut>
-        <a href="/login" class="btn btn-primary ms-3">Se connecter</a>
-      </ng-template>
-    </div>
-  </div>
-</nav>

@@ -1,13 +1,5 @@
 <?php
 
-
-use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
 // Routes pour le controller Articles
 Route::get('api/articles', [App\Http\Controllers\Api\ArticlesController::class, 'index']);
 Route::get('api/article/{id}', [App\Http\Controllers\Api\ArticlesController::class, 'show']);
@@ -19,4 +11,4 @@ Route::get('api/article/search/{titre}', [App\Http\Controllers\Api\ArticlesContr
 Route::resource('api/categories', App\Http\Controllers\Api\CategoriesController::class);
 
 // Routes pour le controller Images
-// Route::resource('api/images', App\Http\Controllers\Api\ImagesController::class);
+Route::resource('api/images', App\Http\Controllers\Api\ImagesController::class);

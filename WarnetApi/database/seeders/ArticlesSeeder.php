@@ -79,16 +79,6 @@ class ArticlesSeeder extends Seeder
                 'image_id' => 5
             ],
             [
-                'id' => 6,
-                'titre' => 'Luger',
-                'description' => 'Pistolet semi-automatique utilisé par l\'armée allemande.',
-                'descriptionLongue' => 'Le pistolet Luger P08 est une arme iconique de l\’armée allemande.',
-                'prix' => 500,
-                'quantiteDispo' => 8,
-                'categorie_id' => 2,
-                'image_id' => 6
-            ],
-            [
                 'id' => 7,
                 'titre' => 'Masque à Gaz',
                 'description' => 'Masque utilisé pour protéger contre les gaz toxiques.',

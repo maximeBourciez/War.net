@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="corps">
+  <div class="content">
+    <div *ngFor="let article of articlesCatalog">
+      <app-article [article]="article"></app-article>
+    </div>
+  </div>
+</div>
+

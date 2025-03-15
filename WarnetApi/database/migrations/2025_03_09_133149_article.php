@@ -24,7 +24,6 @@ return new class extends Migration
             // Clés étrangères
             $table->foreignId('categorie_id')->constrained('categorie');
             $table->foreignId('image_id')->constrained('image');
-            $table->timestamps();
         });
     }
 

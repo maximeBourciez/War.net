@@ -1,0 +1,16 @@
+<div class="articleCard">
+  <img src="{{article.image.chemin}}" [alt]="article.image.alt" class="article-image" />
+  <div class="article-content">
+    <h3>{{ article.titre }}</h3>
+    <p>{{ article.description }}</p>
+    <p class="price">{{ article.prix }} €</p>
+    <div *ngIf="article?.category">
+      <!-- Utilisation de article.category ici -->
+      <p>{{ article.category.nom }}</p>
+    </div>
+    <p class="stock" [ngClass]="{'in-stock': article.quantiteDispo > 0, 'out-of-stock': article.quantiteDispo === 0}">
+      {{ article.quantiteDispo > 0 ? 'En stock' : 'Rupture de stock' }}
+    </p>
+    <button *ngIf="article.quantiteDispo > 0" class="btn-add-cart">Ajouter au panier</button>
+  </div>
+</div>

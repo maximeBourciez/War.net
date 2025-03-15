@@ -16,7 +16,6 @@ return new class extends Migration
             $table->id();
             $table->string('chemin', 100);
             $table->string('alt', 255);
-            $table->timestamps();
         });
     }
 
