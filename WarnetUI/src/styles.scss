@@ -5,3 +5,45 @@ body{
   height:100vh;
   flex-grow: 1;
 }
+
+.btn{
+  transition: 0.3s;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 16px;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+.btngroup{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .btn-add-cart {
+    background-color: #007bff;
+    color: white;
+
+
+    &:hover{
+      background-color: #0056b3;
+    }
+  }
+
+  .btn-details{
+    background-color: #64C3E8;
+    text-decoration: none;
+    color: black;
+
+    &:hover{
+      background-color: #6470E8;
+    }
+  }
+}
+
+

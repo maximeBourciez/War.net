@@ -16,7 +16,8 @@ Route::delete('api/article/{id}', [App\Http\Controllers\Api\ArticlesController::
 Route::get('api/article/search/{titre}', [App\Http\Controllers\Api\ArticlesController::class, 'search']);
 
 // Routes pour le controller Categories
-Route::resource('api/categories', App\Http\Controllers\Api\CategoriesController::class);
+Route::get('api/categories', [App\Http\Controllers\Api\CategoriesController::class, 'index']);
+Route::get('api/categorie/articles/{id}', [App\Http\Controllers\Api\CategoriesController::class, 'articles']);
 
 // Routes pour le controller Images
 // Route::resource('api/images', App\Http\Controllers\Api\ImagesController::class);

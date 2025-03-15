@@ -8,52 +8,97 @@
   background-color: #f9f9f9;
   width: 300px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  height: 450px;
 }
-
-.article-image {
-  width: 100%;
-  height: auto;
+.articleCard .article-image {
+  width: auto;
+  object-fit: cover;
+  height: 200px;
   border-radius: 8px;
 }
-
-.article-content {
+.articleCard .article-content {
   text-align: center;
 }
-
-.price {
+.articleCard .price {
   font-weight: bold;
   color: #27ae60;
 }
-
-.category {
+.articleCard .category {
   font-style: italic;
   color: #555;
 }
-
-.stock {
+.articleCard .stock {
   font-weight: bold;
 }
-
-.in-stock {
+.articleCard .in-stock {
   color: green;
 }
-
-.out-of-stock {
+.articleCard .out-of-stock {
   color: red;
 }
 
-.btn-add-cart {
-  background-color: #007bff;
+.aloneArticle .top {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 0px 10px 10px -5px #999;
+  margin-bottom: 10px;
+}
+.aloneArticle .top img {
+  border-radius: 20px;
+  width: 40%;
+  box-shadow: 0px 10px 10px -5px #999;
+}
+.aloneArticle .top .top-text {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aloneArticle .middle {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 0px 10px 10px -5px #999;
+  margin: 25px 0px 25px 0px;
+}
+.aloneArticle .middle .details {
+  width: 80%;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centre verticalement */
+  flex-direction: column;
+}
+.aloneArticle .middle .details .longDesc {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aloneArticle .middle .details .longDesc button {
+  background-color: #333;
   color: white;
   border: none;
-  padding: 8px 16px;
-  margin-top: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
   cursor: pointer;
-  border-radius: 4px;
 }
-
-.btn-add-cart:hover {
-  background-color: #0056b3;
+.aloneArticle .bottom {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*# sourceMappingURL=article.component.css.map */

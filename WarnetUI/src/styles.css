@@ -6,4 +6,38 @@ body {
   flex-grow: 1;
 }
 
+.btn {
+  transition: 0.3s;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btngroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.btngroup .btn-add-cart {
+  background-color: #007bff;
+  color: white;
+}
+.btngroup .btn-add-cart:hover {
+  background-color: #0056b3;
+}
+.btngroup .btn-details {
+  background-color: #64C3E8;
+  text-decoration: none;
+  color: black;
+}
+.btngroup .btn-details:hover {
+  background-color: #6470E8;
+}
+
 /*# sourceMappingURL=styles.css.map */

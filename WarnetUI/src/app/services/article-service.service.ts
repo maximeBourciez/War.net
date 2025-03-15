@@ -25,4 +25,9 @@ export class ArticleService {
   getArticleById(id: number): Observable<Article>{
     return this.http.get<Article>(this.apiUrl + 'article/' + id);
   }
+
+  // Récupération des articles d'une catégorie
+  getArticlesByCategory(categoryId: number): Observable<Article[]> {
+    return this.http.get<Article[]>(this.apiUrl + 'categorie/articles/' + categoryId);
+  }
 }

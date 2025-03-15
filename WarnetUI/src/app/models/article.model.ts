@@ -8,7 +8,7 @@ export class Article {
   descriptionLongue: string;
   prix: number;
   quantiteDispo: number
-  category: Categorie;
+  categorie: Categorie;
   image: Image;
 
   // Constructeur
@@ -19,7 +19,7 @@ export class Article {
     this.descriptionLongue = descriptionLongue;
     this.prix = prix;
     this.quantiteDispo = quantiteDispo;
-    this.category = category;
+    this.categorie = category;
     this.image = image;
   }
 }

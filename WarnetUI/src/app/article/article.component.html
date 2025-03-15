@@ -1,16 +1,54 @@
-<div class="articleCard">
-  <img src="{{article.image.chemin}}" [alt]="article.image.alt" class="article-image" />
-  <div class="article-content">
-    <h3>{{ article.titre }}</h3>
-    <p>{{ article.description }}</p>
-    <p class="price">{{ article.prix }} €</p>
-    <div *ngIf="article?.category">
-      <!-- Utilisation de article.category ici -->
-      <p>{{ article.category.nom }}</p>
+
+@if (isListView) {
+  <div class="articleCard">
+    <img src="{{article.image.chemin}}" [alt]="article.image.alt" class="article-image" />
+    <div class="article-content">
+      <h3>{{ article.titre }}</h3>
+      <p>{{ article.description }}</p>
+      <p class="price">{{ article.prix }} €</p>
+      <div *ngIf="article?.categorie">
+        <!-- Utilisation de article.category ici -->
+        <p>{{ article.categorie.nom }}</p>
+      </div>
+      <p class="stock" [ngClass]="{'in-stock': article.quantiteDispo > 0, 'out-of-stock': article.quantiteDispo === 0}">
+        {{ article.quantiteDispo > 0 ? 'En stock' : 'Rupture de stock' }}
+      </p>
+      <div class="btngroup">
+        <button *ngIf="article.quantiteDispo > 0" class="btn btn-add-cart">Ajouter au panier</button>
+        <a [routerLink]="'/article/' + article.id" class="btn btn-details">Voir les détails</a>
+      </div>
     </div>
-    <p class="stock" [ngClass]="{'in-stock': article.quantiteDispo > 0, 'out-of-stock': article.quantiteDispo === 0}">
-      {{ article.quantiteDispo > 0 ? 'En stock' : 'Rupture de stock' }}
-    </p>
-    <button *ngIf="article.quantiteDispo > 0" class="btn-add-cart">Ajouter au panier</button>
   </div>
-</div>
+}
+@else{
+  <main class="aloneArticle">
+    <div class="top">
+      <img src="{{ article.image.chemin}}" alt="{{ article.image.alt }}">
+      <div class="top-text">
+        <h1>{{  article.titre }}</h1>
+        <p>{{ article.description }}</p>
+        <p>Catégorie : {{  article.categorie.nom }}</p>
+        <p>{{ article.prix }} €</p>
+        <p>{{ article.quantiteDispo }} en stock</p>
+        <button class="btn btn-add-cart">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="middle">
+      <div class="details">
+        <h2>Détails</h2>
+        <p class="longDesc">
+          {{ article.descriptionLongue }}
+          <br>
+        </p>
+      </div>
+    </div>
+
+    <div class="bottom">
+      @for (article of relatedArticles; track article.id){
+        <app-article [article]="article"></app-article>
+      }
+    </div>
+
+  </main>
+}
