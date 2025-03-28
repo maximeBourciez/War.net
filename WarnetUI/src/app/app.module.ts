@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ArticleComponent
+    ArticleComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ Route::get('/', function () {
 // Routes pour le controller Articles
 Route::get('api/articles', [App\Http\Controllers\Api\ArticlesController::class, 'index']);
 Route::get('api/article/{id}', [App\Http\Controllers\Api\ArticlesController::class, 'show']);
+Route::post('api/article', [App\Http\Controllers\Api\ArticlesController::class, 'store']);
 Route::put('api/article/{id}', [App\Http\Controllers\Api\ArticlesController::class, 'update']);
 Route::delete('api/article/{id}', [App\Http\Controllers\Api\ArticlesController::class, 'destroy']);
 Route::get('api/article/search/{titre}', [App\Http\Controllers\Api\ArticlesController::class, 'search']);

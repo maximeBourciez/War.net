@@ -14,7 +14,7 @@
         {{ article.quantiteDispo > 0 ? 'En stock' : 'Rupture de stock' }}
       </p>
       <div class="btngroup">
-        <button *ngIf="article.quantiteDispo > 0" class="btn btn-add-cart">Ajouter au panier</button>
+        <button *ngIf="article.quantiteDispo > 0" (click)="addToCart(article.id)" class="btn btn-add-cart">Ajouter au panier</button>
         <a [routerLink]="'/article/' + article.id" class="btn btn-details">Voir les détails</a>
       </div>
     </div>
@@ -30,7 +30,7 @@
         <p>Catégorie : {{  article.categorie.nom }}</p>
         <p>{{ article.prix }} €</p>
         <p>{{ article.quantiteDispo }} en stock</p>
-        <button class="btn btn-add-cart">Ajouter au panier</button>
+        <button *ngIf="article.quantiteDispo > 0" (click)="addToCart(article.id)" class="btn btn-add-cart">Ajouter au panier</button>
       </div>
     </div>
 
@@ -45,9 +45,30 @@
     </div>
 
     <div class="bottom">
-      @for (article of relatedArticles; track article.id){
-        <app-article [article]="article"></app-article>
-      }
+      <h2 class="title">Articles similaires</h2>
+      <div class="carroussel">
+        @for (article of relatedArticles; track article.id){
+          <div class="articleCard">
+            <img src="{{article.image.chemin}}" [alt]="article.image.alt" class="article-image" />
+            <div class="article-content">
+              <h3>{{ article.titre }}</h3>
+              <p>{{ article.description }}</p>
+              <p class="price">{{ article.prix }} €</p>
+              <div *ngIf="article?.categorie">
+                <!-- Utilisation de article.category ici -->
+                <p>{{ article.categorie.nom }}</p>
+              </div>
+              <p class="stock" [ngClass]="{'in-stock': article.quantiteDispo > 0, 'out-of-stock': article.quantiteDispo === 0}">
+                {{ article.quantiteDispo > 0 ? 'En stock' : 'Rupture de stock' }}
+              </p>
+              <div class="btngroup">
+                <button *ngIf="article.quantiteDispo > 0" (click)="addToCart(article.id)" class="btn btn-add-cart">Ajouter au panier</button>
+                <a [routerLink]="'/article/' + article.id" class="btn btn-details">Voir les détails</a>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
     </div>
 
   </main>

@@ -35,7 +35,7 @@ class ArticlesSeeder extends Seeder
                 'descriptionLongue' => 'Le casque M1 a été introduit en 1941, conçu pour remplacer les précédents casques en métal utilisés par l’armée américaine. Ce modèle est devenu un symbole emblématique des forces américaines durant la Seconde Guerre mondiale, avec sa coque en acier et son système de suspension interne qui offrait un meilleur confort et une meilleure protection. Le casque M1 fut porté par les soldats de toutes les branches de l’armée et devint rapidement un objet de reconnaissance instantanée, tant pour son efficacité que pour son design distinctif. Son rôle ne se limita pas à la protection contre les éclats d’obus, il offrait aussi une capacité de camouflage et un confort dans les conditions difficiles du front.',
                 'prix' => 120,
                 'quantiteDispo' => 10,
-                'categorie_id' => 1,
+                'categorie_id' => 4,
                 'image_id' => 1
             ],
             [
@@ -75,7 +75,7 @@ class ArticlesSeeder extends Seeder
                 'descriptionLongue' => 'La grenade Mk 2, surnommée “pineapple” en raison de sa forme, fut utilisée par les forces américaines pendant la Seconde Guerre mondiale. Sa conception, avec des rainures sur son corps métallique, lui permettait de se fragmenter efficacement lors de l’explosion, causant de lourdes pertes parmi les troupes ennemies. La Mk 2 était souvent utilisée lors des combats rapprochés, notamment dans les tranchées ou dans les zones urbaines. Sa simplicité de conception et sa fiabilité en faisaient un choix privilégié pour les soldats américains, qui en possédaient de grandes quantités. Cependant, son utilisation nécessitait une manipulation prudente en raison du risque de blessures pour l’utilisateur en cas d’erreur.',
                 'prix' => 30,
                 'quantiteDispo' => 20,
-                'categorie_id' => 6,
+                'categorie_id' => 7,
                 'image_id' => 5
             ],
             [

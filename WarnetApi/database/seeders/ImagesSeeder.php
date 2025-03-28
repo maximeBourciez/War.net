@@ -25,7 +25,6 @@ class ImagesSeeder extends Seeder
             ['id' => 3, 'chemin' => $this->apiUrl . '/panzer_iv.jpg', 'alt' => 'Char Panzer IV'],
             ['id' => 4, 'chemin' => $this->apiUrl . '/grenade_manche.jpg', 'alt' => 'Grenade Manche'],
             ['id' => 5, 'chemin' => $this->apiUrl . '/grenade_mk2.jpg', 'alt' => 'Grenade Mk 2'],
-            ['id' => 6, 'chemin' => $this->apiUrl . '/luger.jpg', 'alt' => 'Luger'],
             ['id' => 7, 'chemin' => $this->apiUrl . '/masque_gaz.jpg', 'alt' => 'Masque à Gaz'],
             ['id' => 10, 'chemin' => $this->apiUrl . '/tank_panzer.jpg', 'alt' => 'Tank Panzer'],
             ['id' => 11, 'chemin' => $this->apiUrl . '/Thompson_1928.jpg', 'alt' => 'Thompson 1928'],
